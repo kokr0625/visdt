@@ -1,58 +1,110 @@
-<!-- This is a static file -->
-<!-- served from your routes in server.js -->
-
-<!-- You might want to try something fancier: -->
-<!-- html/nunjucks docs: https://mozilla.github.io/nunjucks/ -->
-<!-- pug: https://pugjs.org/ -->
-<!-- haml: http://haml.info/ -->
-<!-- hbs(handlebars): http://handlebarsjs.com/ -->
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Welcome to Glitch!</title>
-    <meta name="description" content="A cool thing made with Glitch">
-    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
 
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/style.css">
-    
-    <!-- import the webpage's client-side javascript file -->
-    <script src="/client.js" defer></script>
-  </head>
-  <body>
-    <header>
-      <h1>
-        A Dream of the Future
-      </h1>
-    </header>
+<head>
+  <title>Vuetify demo</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
 
-    <main>
-      <p class="bold">Oh hi,</p>
-      
-      <p>Tell me your hopes and dreams:</p>
-      
-      <form>
-        <input name="dream" type="text" maxlength="100" placeholder="Dreams!" aria-labelledby="submit-dream">
-        <button type="submit" id="submit-dream">Submit Dream</button>
-      </form>
-      
-      <section class="dreams">
-        <ul id="dreams"></ul>
-      </section>
-    </main>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/vuetify/dist/vuetify.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/themes/prism-okaidia.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
 
-    <footer>
-      Made with <a href="https://glitch.com">Glitch</a>!
-    </footer>
+<body>
+  <div id="app">
+    <v-app>
+      <navigation></navigation>
+      <v-content>
+        <v-container fluid>
+          <v-layout wrap text-xs-center>
+            <v-flex xs12>
+              <h1 mb-5 class="display-3 mb-5">
+                Vuetify demo
+              </h1>
+            </v-flex>
+          </v-layout>
 
-    <!-- include the Glitch button to show what the webpage is about and
-          to make it easier for folks to view source and remix -->
-    <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
-    <script src="https://button.glitch.me/button.js"></script>
+          <v-layout row wrap mb-4>
+            <v-flex xs12 sm6 md3 lg3 xl3 pa-4 deep-purple lighten-4>
+              <h6 class="title  mb-4">Breakpoints</h6>
+              <div class="body-1">
+                <p>xl = @media (min-width: 1904px) 4k and ultra-wides</p>
+                <p>lg = @media (min-width: 1264px) desktop</p>
+                <p>md = @media (min-width: 960px) large tablet to laptop</p>
+                <p>sm = @media (min-width: 600px) small to medium tablet</p>
+                <p>xs = @media (min-width: 0) small to large handset</p>
+              </div>
+            </v-flex>
 
-  </body>
+            <v-flex xs12 sm6 md3 pa-4 light-blue lighten-4>
+              <h6 class="title  mb-4">Widths</h6>
+              <div class="body-1">
+                <p>flex-basis and max-width</p>
+                <p>xs12 = 100%</p>
+                <p>xs6 = 50%</p>
+                <p>xs5 = 41.6%</p>
+                <p>xs4 = 33.3%</p>
+                <p>xs3 = 25%</p>
+                <p>xs2 = 16.6%</p>
+                <p>xs1 = 8.3%</p>
+              </div>
+            </v-flex>
+
+            <v-flex xs12 sm6 md3 pa-4 orange lighten-4>
+              <h6 class="title  mb-4">Spacing</h6>
+              <div class="body-1">
+                <p>p/m 1-5</p>
+                <p>pa</p>
+                <p>py</p>
+                <p>ph</p>
+                <p>pt</p>
+                <p>pr</p>
+                <p>pb</p>
+                <p>pl</p>
+              </div>
+            </v-flex>
+
+            <v-flex xs12 sm6 md3 pa-4 blue-grey lighten-4>
+              <div class="body-1">
+                <h6 class="title  mb-4">Helpers</h6>
+                <p>d-flex</p>
+                <p>d-inline-flex</p>
+                <p>d-block</p>
+                <p>d-inline-block</p>
+              </div>
+            </v-flex>
+          </v-layout>
+
+          <v-layout row wrap text-xs-center>
+            <v-flex xs12>
+              <v-btn color="secondary" href="https://vuetifyjs.com/vuetify/quick-start" target="_blank" rel="noopener">
+                Vuetify documentation
+              </v-btn>
+            </v-flex>
+
+            <v-flex xs12>
+              <v-btn flat href="https://glitch.com/edit/#!/vuetify" target="_blank" rel="noopener">
+                View the code for this page
+              </v-btn>
+            </v-flex>
+          </v-layout>
+
+        </v-container>
+      </v-content>
+
+    </v-app>
+
+  </div>
+
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vuetify/dist/vuetify.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  <script src="/script.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.10.0/prism.min.js"></script>
+</body>
+
 </html>
