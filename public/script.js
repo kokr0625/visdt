@@ -50,26 +50,22 @@ v-for="it in menus" :key="it.title" :to="it.to" @click="">
           title: 'settings',
           to: '/01',
         },{
-          title: 'file',
+          title: 'mdi-tennis',
           to: '/02'
         }
       ],
-      menuActive: false,
       drawer: null,
 
     }
   },
 
   methods: {
-    toggleMenu() {
-      this.menuActive = !this.menuActive
-    }
+   
   }
 })
 
-
-const ContentHome = {
-  template: ' <v-container fluid>
+const CHome = {
+  template: ` <v-container fluid>
           <v-layout wrap text-xs-center>
             <v-flex xs12>
               <h1 mb-5 class="display-3 mb-5">
@@ -145,8 +141,7 @@ const ContentHome = {
 
         </v-container>
 
-  '
-
+  `
 }
 
 const Home = {
@@ -165,7 +160,7 @@ const routes = [{
     component: Two
   },{
     path: '/02',
-    component: ContentHome
+    component: CHome
   }
 ]
 
