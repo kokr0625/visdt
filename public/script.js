@@ -1,6 +1,7 @@
 var Vue = Vue
 var VueRouter = VueRouter
 var Vuetify = Vuetify
+var VHome = VHome
 
 Vue.component('navigation', {
   template: `
@@ -34,8 +35,6 @@ v-for="it in menus" :key="it.title" :to="it.to" @click="">
       <v-toolbar-title>Application</v-toolbar-title>
     </v-app-bar>
      <v-footer app dark>
-        <router-view></router-view>
-      
       </v-footer>
 
     
