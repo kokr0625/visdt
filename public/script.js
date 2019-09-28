@@ -33,7 +33,7 @@ v-for="it in menus" :key="it.title" :to="it.to" @click="">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title>Application</v-toolbar-title>
     </v-app-bar>
-     <v-footer app dark>
+     <v-footer app dark>{{Date()}}
       </v-footer>
 
     
