@@ -5,6 +5,16 @@
 const express = require('express');
 const app = express();
 var mongoose = require('mongoose');
+mongoose.connect(process.env.MONGO_DB); // 1
+var db = mongoose.connection; // 2
+// 3﻿
+db.once("open", function(){
+ console.log("DB connected");
+});
+db.on("error", function(err){
+ console.log("DB ERROR : ", err);
+});
+
 
 // we've started you off with Express, 
 // but feel free to use whatever libs or frameworks you'd like through `package.json`.
