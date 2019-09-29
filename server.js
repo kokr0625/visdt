@@ -5,7 +5,10 @@
 const express = require('express');
 const app = express();
 var mongoose = require('mongoose');
-mongoose.connect(process.env.MONGO_DB); // 1
+
+mongoose.set('useCreateIndex', true); 
+mongoose.connect(process.env.MONGO_DB, { useNewUrlParser: true }); // 1
+
 var db = mongoose.connection; // 2
 // 3﻿
 db.once("open", function(){
