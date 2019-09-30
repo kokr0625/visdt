@@ -1,25 +1,51 @@
 <template>
   <v-app>
-    <v-app-bar app>
-      <v-app-bar-nav-icon></v-app-bar-nav-icon>
+     <v-navigation-drawer
+      v-model="drawer"
+      
+      app                 
+    >
+      <v-list
+        nav
+        dense
+      >
+        <v-list-item-group
+          v-model="group"
+          active-class="deep-purple--text text--accent-4"
+        >
+          <v-list-item>
+            <v-list-item-title>Foo</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title>Bar</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title>Fizz</v-list-item-title>
+          </v-list-item>
+
+          <v-list-item>
+            <v-list-item-title>Buzz</v-list-item-title>
+          </v-list-item>
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
+    <v-app-bar app dark>
+     <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      
       <v-toolbar-title class="headline text-uppercase">
         <span>Vuetify</span>
         <span class="font-weight-light">MATERIAL DESIGN</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn
-        text
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
+      
     </v-app-bar>
 
     <v-content>
       <router-view/>
     </v-content>
+    <v-footer app dark>{{new Date()}}</v-footer>
   </v-app>
 </template>
 
@@ -28,7 +54,7 @@
 export default {
   name: 'App',
   data: () => ({
-    //
+    drawer: false,
   }),
 };
 </script>
