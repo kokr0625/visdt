@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <v-app-bar app>
+      <v-app-bar-nav-icon></v-app-bar-nav-icon>
       <v-toolbar-title class="headline text-uppercase">
         <span>Vuetify</span>
         <span class="font-weight-light">MATERIAL DESIGN</span>
