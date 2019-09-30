@@ -1,20 +1,15 @@
 {
-  "//1": "describes your app and its dependencies",
-  "//2": "https://docs.npmjs.com/files/package.json",
-  "//3": "updating this file will download and update your packages",
-  "name": "hello-express",
-  "version": "0.0.1",
-  "description": "A simple Node app built on Express, instantly up and running.",
-  "main": "main.js",
+  "name": "ccf",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
     "clean": "rimraf dist",
-    "build": "npm run clean && webpack --mode production",
-    "serve": "webpack-dev-server --mode development",
-    "start": "npm run serve"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+     "start": "npm run serve"
   },
   "dependencies": {
-    "express": "^4.16.4",
-    "mongoose": "^5.7.1",
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
@@ -22,40 +17,40 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
-    
-    "vue-loader": "^15.7.1",
-   
+    "@vue/cli-plugin-babel": "^3.11.0",
+    "@vue/cli-plugin-eslint": "^3.11.0",
+    "@vue/cli-service": "^3.11.0",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "sass": "^1.17.4",
+    "sass-loader": "^7.1.0",
+    "vue-cli-plugin-vuetify": "^0.6.3",
     "vue-template-compiler": "^2.6.10",
-    
-  
-    "webpack": "^4.35.0",
-    "webpack-cli": "^3.3.5",
-    "webpack-dev-server": "^3.3.1",
-    "babel-loader": "^8.0.5",
-    "@babel/core": "^7.6.0",
-    "@babel/preset-env": "^7.6.2",
-    "css-loader": "^3.2.0",
-    "vue-style-loader": "^4.1.2",
-    "html-webpack-plugin": "^3.2.0",
-    "rimraf": "^3.0.0",
-    "sass-loader": "^8.0.0",
-    "fibers": "^4.0.1",
-    "sass": "^1.22.12",
-    "deepmerge": "^4.0.0",
-    "node-sass": "^4.12.0",
     "vuetify-loader": "^1.2.2"
-    
   },
-  "engines": {
-    "node": "10.x"
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "@vue/airbnb"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
   },
-  "repository": {
-    "url": "https://glitch.com/edit/#!/hello-express"
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
   },
-  "license": "MIT",
-  "keywords": [
-    "node",
-    "glitch",
-    "express"
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
   ]
 }
