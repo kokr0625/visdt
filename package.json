@@ -3,11 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "clean": "rimraf dist",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-     "start": "npm run serve"
+    "start": "npm run serve"
   },
   "dependencies": {
     "core-js": "^2.6.5",
@@ -24,6 +23,7 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.9.0",
     "sass": "^1.17.4",
     "sass-loader": "^7.1.0",
     "vue-cli-plugin-vuetify": "^0.6.3",
@@ -43,9 +43,6 @@
     "parserOptions": {
       "parser": "babel-eslint"
     }
-  },
-  "engines": {
-    "node": "10.x"
   },
   "postcss": {
     "plugins": {
