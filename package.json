@@ -5,14 +5,14 @@
   "name": "hello-express",
   "version": "0.0.1",
   "description": "A simple Node app built on Express, instantly up and running.",
-  "main": "server.js",
+  "main": "main.js",
   "scripts": {
     
     "clean": "rimraf dist",
     "build": "npm run clean && webpack --mode production",
     "serve": "webpack-dev-server --mode development",
   
-    "start": "npm run serve && node server.js"
+    "start": "npm run serve"
   },
   "dependencies": {
     "express": "^4.16.4",
