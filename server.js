@@ -20,10 +20,10 @@ const Cat = mongoose.model('Cat', { name: String });
 const kitty = new Cat({ name: 'Zildjian' });
 kitty.save().then(() => console.log('meow'));
 
-app.use(express.static('public'));
+app.use(express.static('dist'));
 
 app.get('/', function(request, response) {
-  response.sendFile(__dirname + '/views/index.html');
+  response.sendFile(__dirname + '/dist/index.html');
 });
 
 const listener = app.listen(process.env.PORT, function() {
