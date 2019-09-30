@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "express": "^4.16.4",
-    "mongoose": "^5.7.1"
+    "mongoose": "^5.7.1",
+    "@vue/cli": "^3.11.0"
   },
   "engines": {
     "node": "10.x"
