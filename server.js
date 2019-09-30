@@ -1,16 +1,13 @@
-// server.js
-// where your node app starts
 
-// init project
 const express = require('express');
 const app = express();
 var mongoose = require('mongoose');
 
 mongoose.set('useCreateIndex', true); 
-mongoose.connect(process.env.MONGO_DB, { useNewUrlParser: true }); // 1
+mongoose.connect(process.env.MONGO_DB, { useNewUrlParser: true }); 
 
-var db = mongoose.connection; // 2
-// 3﻿
+var db = mongoose.connection; 
+
 db.once("open", function(){
  console.log("DB connected");
 });
@@ -23,18 +20,12 @@ const Cat = mongoose.model('Cat', { name: String });
 const kitty = new Cat({ name: 'Zildjian' });
 kitty.save().then(() => console.log('meow'));
 
-// we've started you off with Express, 
-// but feel free to use whatever libs or frameworks you'd like through `package.json`.
-
-// http://expressjs.com/en/starter/static-files.html
 app.use(express.static('public'));
 
-// http://expressjs.com/en/starter/basic-routing.html
 app.get('/', function(request, response) {
   response.sendFile(__dirname + '/views/index.html');
 });
 
-// listen for requests :)
 const listener = app.listen(process.env.PORT, function() {
   console.log('Your app is listening on port ' + listener.address().port);
 });
