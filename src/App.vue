@@ -2,17 +2,18 @@
   <v-app>
      <v-navigation-drawer
       v-model="drawer"
-      
       app                 
     >
       <v-list
-        nav
         dense
+        rounded
       >
         <v-list-item-group
           v-model="group"
           active-class="deep-purple--text text--accent-4"
         >
+          <v-subheader>Head</v-subheader>
+          <v-divider :inset="inset"></v-divider>
           <v-list-item>
             <v-list-item-title>Foo</v-list-item-title>
           </v-list-item>
