@@ -10,7 +10,7 @@
     "clean": "rimraf dist",
     "build": "npm run clean && webpack --mode production",
     "serve": "webpack-dev-server --mode development",
-    "start": "open-cli localhost:8080 && npm run serve"
+    "start": "nohup npm run serve && open-cli http://localhost:8080 "
   },
   "dependencies": {
     "express": "^4.16.4",
