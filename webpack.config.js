@@ -12,8 +12,9 @@ module.exports = {
     ]
   },
   devServer: {
-    port: "8080",
-    open: true,
+    disableHostCheck: true,
+    host: '0.0.0.0',
+    port: '8080',
     hot: true
   },
   plugins: [
