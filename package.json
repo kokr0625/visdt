@@ -1,5 +1,5 @@
 {
-  "name": "ccf",
+  "name": "webpack-dev1",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -43,6 +43,9 @@
     "parserOptions": {
       "parser": "babel-eslint"
     }
+  },
+  "engines": {
+    "node": "10.x"
   },
   "postcss": {
     "plugins": {
