@@ -5,19 +5,17 @@
   "name": "hello-express",
   "version": "0.0.1",
   "description": "A simple Node app built on Express, instantly up and running.",
-  "main": "main.js",
+  "main": "server.js",
   "scripts": {
-    
     "clean": "rimraf dist",
     "build": "npm run clean && webpack --mode production",
     "serve": "webpack-dev-server --mode development",
-  
-    "start": "npm run serve"
+    "start": "open-cli localhost:8080 && npm run serve"
   },
   "dependencies": {
     "express": "^4.16.4",
-    "mongoose": "^5.7.1"
-    
+    "mongoose": "^5.7.1",
+    "open-cli": "^5.0.0"
   },
   "devDependencies": {
     "vue": "^2.6.10",
