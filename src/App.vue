@@ -28,11 +28,11 @@
         >
           <v-subheader>Head</v-subheader>
           <v-divider :inset="inset"></v-divider>
-          <v-list-item>
+          <v-list-item to="/">
             <v-list-item-title>Foo</v-list-item-title>
           </v-list-item>
 
-          <v-list-item>
+          <v-list-item to= "/about">
             <v-list-item-title>Bar</v-list-item-title>
           </v-list-item>
 
