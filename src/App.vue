@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app dark absolute>
+    <v-app-bar app dark absolute clipped-left>
      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       
       <v-toolbar-title class="headline text-uppercase">
@@ -10,16 +10,17 @@
       <v-spacer></v-spacer>
       
     </v-app-bar>
-    <v-content>
+    
      <v-navigation-drawer
       v-model="drawer"
       src="https://cdn.vuetifyjs.com/images/backgrounds/bg-2.jpg" 
       dark
-      app                    
+      app clipped                  
     >
       <v-list
         dense
         rounded
+              nav
       >
         <v-list-item-group
           v-model="group"
@@ -44,8 +45,13 @@
           </v-list-item>
         </v-list-item-group>
       </v-list>
+       <template v-slot:append>
+        <div class="pa-2">
+          <v-btn block>Logout</v-btn>
+        </div>
+      </template>
     </v-navigation-drawer>
-  </v-content>
+  
 
     <v-content>
       <router-view/>
