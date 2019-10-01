@@ -2,8 +2,8 @@
   <div>
     <div v-if="hasResult">
       <div v-for="post in posts" v-bind:key="post.id">
-        <h1></h1>
-        <p></p>
+        <h1>{{post.title}}</h1>
+        <p>{{post.body}}</p>
       </div>
     </div>
     <button v-else v-on:click="searchTerm">글 불러오기</button>
@@ -28,8 +28,8 @@ export default {
   methods: {
     searchTerm: function () {
       // using JSONPlaceholder
-      const baseURI = 'https://jsonplaceholder.typicode.com';
-      this.$http.get(`${baseURI}/posts`)
+      
+      this.$http.get('https://jsonplaceholder.typicode.com/posts')
       .then((result) => {
         console.log(result)
         this.posts = result.data
