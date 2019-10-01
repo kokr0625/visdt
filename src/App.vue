@@ -13,7 +13,9 @@
     <v-content>
      <v-navigation-drawer
       v-model="drawer"
-                     
+      src="https://cdn.vuetifyjs.com/images/backgrounds/bg-2.jpg" 
+      dark
+      app                    
     >
       <v-list
         dense
