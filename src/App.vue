@@ -1,8 +1,19 @@
 <template>
   <v-app>
+    <v-app-bar app dark absolute>
+     <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      
+      <v-toolbar-title class="headline text-uppercase">
+        <span>Vuetify</span>
+        <span class="font-weight-light">MATERIAL DESIGN</span>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      
+    </v-app-bar>
+    <v-content>
      <v-navigation-drawer
       v-model="drawer"
-      app                 
+                     
     >
       <v-list
         dense
@@ -32,16 +43,7 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar app dark>
-     <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      
-    </v-app-bar>
+  </v-content>
 
     <v-content>
       <router-view/>
@@ -55,7 +57,7 @@
 export default {
   name: 'App',
   data: () => ({
-    drawer: false,
+    drawer: true,
   }),
 };
 </script>
