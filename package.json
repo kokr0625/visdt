@@ -6,16 +6,22 @@
     "serve": "vue-cli-service serve --inline --hot",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "start": "npm run serve"
+    "api": "node ./api/server.js",
+    "start": "start npm run serve && start npm run api"
   },
   "dependencies": {
+    "axios": "^0.19.0",
+    "bcrypt": "^3.0.6",
     "core-js": "^2.6.5",
+    "cors": "^2.8.5",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.22.2",
+    "mongoose": "^5.7.3",
+    "nodemon": "^1.19.3",
     "vue": "^2.6.10",
     "vue-router": "^3.0.3",
     "vuetify": "^2.0.0",
-    "vuex": "^3.0.1",
-    "mongoose": "^5.7.3",
-    "axios": "^0.19.0"
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.11.0",

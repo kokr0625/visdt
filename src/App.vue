@@ -36,7 +36,7 @@
             <v-list-item-title>Bar</v-list-item-title>
           </v-list-item>
 
-          <v-list-item>
+          <v-list-item to= "/note">
             <v-list-item-title>Fizz</v-list-item-title>
           </v-list-item>
 
@@ -51,8 +51,6 @@
         </div>
       </template>
     </v-navigation-drawer>
-  
-
     <v-content>
       <router-view/>
     </v-content>
@@ -61,11 +59,11 @@
 </template>
 
 <script>
-
 export default {
   name: 'App',
   data: () => ({
     drawer: true,
+   
   }),
 };
 </script>
